@@ -12,7 +12,7 @@ function addTask()
     }
     const task = document.createElement("li");
     const removeButton = document.createElement("button");
-    removeButton.setAttribute("class", "remove-btn");
+    removeButton.classList.add("remove-btn");
     removeButton.textContent = "Remove";
     task.textContent = taskText;
     removeButton.addEventListener("click", () => task.remove());
