@@ -4,8 +4,8 @@ const taskList  = document.getElementById("task-list");
 
 function addTask()
 {
-    const taskText =  taskInput.value;
-    if (taskText.trim().length === 0)
+    const taskText =  taskInput.value.trim();
+    if (taskText.length === 0)
     {
         alert("enter a task.")
         return ;
