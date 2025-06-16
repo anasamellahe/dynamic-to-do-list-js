@@ -29,7 +29,7 @@ function createTaskElement(taskText)
     return task;
 }
 
-function loadsTasks(storedTasks)
+function loadTasks(storedTasks)
 {
     const storedTasksArray =  JSON.parse(storedTasks);
     storedTasksArray.forEach(element => 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     const storedTasks =  localStorage.getItem("tasks");
     if (storedTasks !== null)
-        loadsTasks(storedTasks);
+        loadTasks(storedTasks);
     addButton.addEventListener('click', () =>  addTask());
     taskInput.addEventListener("keypress", (event) =>
     {
